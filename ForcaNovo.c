@@ -7,15 +7,43 @@
 
 void palavraaleatoria(char palavra[],char dica[]);
 void imagem(int qtd);
-
+void IniciaJogo(char *palavra,char *dica);
 
 int main(){
+    char *palavra,*dica;
 
+    IniciaJogo(palavra,dica);
+    //printf("%s %s",palavra,dica);
 
+    free(palavra);
+    free(dica);
     return 0;
 }
 
-void palavraaleatoria(char palavra[],char dica[]){
+void IniciaJogo(char *palavra,char *dica){
+    int cod;
+    char temp[50],temp2[50];
+
+    printf("***  JOGO DA FORCA  ***\n");
+    printf("*********************\n\n");
+    printf("REGRAS:\n N DIGITE LETRAS COM ACENTOS OU CEDILHA\n");
+    printf("digite 1 para escrever a palavra ou 2 para jogar com uma palavra aleatoria:\n");
+    scanf("%d",&cod);
+
+    if(cod == 1){
+        printf("digite a palavra:\n");
+        scanf("%s",temp);
+        palavra = strdup(temp);
+
+        printf("digite uma dica:\n");
+        scanf("%s",temp2);
+        dica = strdup(temp2);
+    }
+}
+
+
+
+void palavraaleatoria(char *palavra,char *dica){
     srand(time(NULL));
     int num = rand() % 50;
     
