@@ -13,22 +13,25 @@ int main(){
     char palavra[50],letra;
     char a;
     char dica[50];
+    char temp[50];
 
     printf("***  JOGO DA FORCA  ***\n");
-    printf("\n");
     printf("*********************\n\n");
     printf("REGRAS:\n N DIGITE LETRAS COM ACENTOS OU CEDILHA\n");
     printf("digite 1 para escrever a palavra ou 2 para jogar com uma palavra aleatoria:\n");
     scanf("%d",&cod);
-    
+
     if(cod == 1){
         printf("digite a palavra\n");
-        scanf("%s",palavra);
-        scanf("%c",&a);
+        scanf("%s",temp);
+        getchar();
+        for(int i=0;i<strlen(temp);i++){
+            palavra[i] = toupper(temp[i]);
+        }
+
         printf("digite uma palavra como dica\n");
         scanf("%s",dica);
-        scanf("%c",&a);
-        printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        getchar();
         system("clear");
         printf("*** JOGO DA FORCA ***\n");
         printf("*********************\n\n");
@@ -50,7 +53,7 @@ int main(){
 
     while(fazparar != 0){
         printf("\ndigite a letra:\n");
-        scanf("%c%c",&a,&letra);
+        scanf("%c%c",&letra,&a);
         letra = toupper(letra);
         printf("\n");
         lista[tamlista] = letra;
@@ -109,7 +112,9 @@ int ojogo(char letra, char palavra[], char lista[],int tamlista){
         printf("\n");
         chances--;
     }
+
     imagem(chances);
+
     printf("\nVOCE TEM %d CHANCES AINDA",chances);
     if(chances == 0){
         printf("\nVOCE PERDEU :\( ");
