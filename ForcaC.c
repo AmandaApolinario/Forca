@@ -20,6 +20,7 @@ int main(){
     printf("REGRAS:\n N DIGITE LETRAS COM ACENTOS OU CEDILHA\n");
     printf("digite 1 para escrever a palavra ou 2 para jogar com uma palavra aleatoria:\n");
     scanf("%d",&cod);
+    
     if(cod == 1){
         printf("digite a palavra\n");
         scanf("%s",palavra);
@@ -28,6 +29,7 @@ int main(){
         scanf("%s",dica);
         scanf("%c",&a);
         printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        system("clear");
         printf("*** JOGO DA FORCA ***\n");
         printf("*********************\n\n");
     }
