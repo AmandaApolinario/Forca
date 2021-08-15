@@ -14,7 +14,8 @@ int main(){
     char a;
     char dica[50];
 
-    printf("*** JOGO DA FORCA ***\n");
+    printf("***  JOGO DA FORCA  ***\n");
+    printf("\n");
     printf("*********************\n\n");
     printf("REGRAS:\n N DIGITE LETRAS COM ACENTOS OU CEDILHA\n");
     printf("digite 1 para escrever a palavra ou 2 para jogar com uma palavra aleatoria:\n");
