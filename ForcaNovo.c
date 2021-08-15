@@ -13,7 +13,7 @@ int main(){
     char *palavra,*dica;
 
     IniciaJogo(palavra,dica);
-    //printf("%s %s",palavra,dica);
+    printf("%s %s",palavra,dica);
 
     free(palavra);
     free(dica);
@@ -38,11 +38,12 @@ void IniciaJogo(char *palavra,char *dica){
         printf("digite uma dica:\n");
         scanf("%s",temp2);
         dica = strdup(temp2);
+
     }
 }
 
 
-
+/*
 void palavraaleatoria(char *palavra,char *dica){
     srand(time(NULL));
     int num = rand() % 50;
@@ -234,3 +235,4 @@ void imagem(int qtd){
         printf("--           \n");
     }
 }
+*/
