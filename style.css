@@ -1,0 +1,29 @@
+h1{
+    text-align: center;
+    color: #FFA384;
+}
+
+h2{
+    text-align: center;
+    color: #658EA9;
+}
+
+div{
+    text-align: center;
+}
+
+#dica{
+    font-size: larger;
+}
+
+body{
+    background-color: #E7F2F8;
+}
+
+input{
+    background-color: #EFE7BC;
+}
+
+#recomecar{
+    background-color: #E98973;
+}
