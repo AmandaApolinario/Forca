@@ -8,8 +8,6 @@ void imagem(int qtd);
 char* escolhePalavra(char** palavras);
 void oJogo(char* palavra,char* preenchePalavra);
 
-//TEM QUE LIBERAR A MEMORIA AINDA
-
 int main(){
     FILE *arq = fopen("palavras.txt","r");
     if(arq == NULL){
